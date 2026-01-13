@@ -2,8 +2,8 @@ name: Update IPTV Source
 
 on:
   schedule:
-    # 北京时间每天早上 6:00 运行 (UTC时间 22:00)
-    - cron: '0 22 * * *'
+    # 北京时间 16:30 (UTC 08:30) 和 04:30 (UTC 20:30)
+    - cron: '30 8,20 * * *'
   workflow_dispatch: # 允许手动点按钮运行
 
 jobs:
