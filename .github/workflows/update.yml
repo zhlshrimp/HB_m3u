@@ -36,3 +36,14 @@ jobs:
         # 这里加个防止报错的逻辑：如果没有更新就不提交
         git commit -m "Auto update IPTV sources" || echo "No changes to commit"
         git push
+
+
+        # ... 上面是你原本生成文件的步骤 ...
+
+    - name: Trigger Gitee Sync
+      # 只有上面成功了才执行
+      if: success()
+      run: |
+        curl -X POST --header 'Content-Type: application/json;charset=UTF-8' \
+        "https://gitee.com/api/v5/repos/${{ secrets.GITEE_USER }}/${{ github.event.repository.name }}/sync" \
+        -d '{"access_token":"${{ secrets.GITEE_TOKEN }}"}'
