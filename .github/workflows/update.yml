@@ -40,10 +40,17 @@ jobs:
 
         # ... 上面是你原本生成文件的步骤 ...
 
-    - name: Trigger Gitee Sync
-      # 只有上面成功了才执行
+    - name: Push to Gitee (HTTPS)
       if: success()
+      env:
+        # 引用你设置好的变量
+        GITEE_TOKEN: ${{ secrets.GITEE_TOKEN }}
+        GITEE_USER: ${{ secrets.GITEE_USER }}
       run: |
-        curl -X POST --header 'Content-Type: application/json;charset=UTF-8' \
-        "https://gitee.com/api/v5/repos/${{ secrets.GITEE_USER }}/${{ github.event.repository.name }}/sync" \
-        -d '{"access_token":"${{ secrets.GITEE_TOKEN }}"}'
+        # 1. 设置远程仓库地址，把 Token 嵌在 URL 里，格式是：https://用户名:Token@gitee.com/用户名/仓库名.git
+        # 注意：下面的 main 是分支名，如果你的分支叫 master，请把 main 改成 master
+        
+        git remote add gitee "https://${GITEE_USER}:${GITEE_TOKEN}@gitee.com/${GITEE_USER}/${{ github.event.repository.name }}.git" || git remote set-url gitee "https://${GITEE_USER}:${GITEE_TOKEN}@gitee.com/${GITEE_USER}/${{ github.event.repository.name }}.git"
+        
+        # 2. 强制推送到 Gitee
+        git push gitee main -f
