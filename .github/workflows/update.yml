@@ -2,55 +2,50 @@ name: Update IPTV Source
 
 on:
   schedule:
-    - cron: '0 20 * * *'  # 每天 UTC 22:00 (北京时间 06:00) 运行
-  workflow_dispatch:      # 允许手动触发
-# --- 新增的部分 START ---
-permissions:
-  contents: write
-# --- 新增的部分 END ---
+    # 北京时间每天早上 6:00 运行 (UTC时间 22:00)
+    - cron: '0 22 * * *'
+  workflow_dispatch: # 允许手动点按钮运行
+
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
+    # 1. 检出代码
     - name: Checkout code
       uses: actions/checkout@v3
 
+    # 2. 设置 Python 环境
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
-        python-version: '3.x'
+        python-version: '3.9'
 
+    # 3. 安装依赖
     - name: Install dependencies
       run: |
+        python -m pip install --upgrade pip
         pip install requests
 
-    - name: Run script
+    # 4. 运行合并脚本
+    - name: Run merger script
       run: python main.py
 
-    - name: Commit and push changes
+    # 5. 提交更改到 GitHub
+    - name: Commit and push to GitHub
       run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
-        git add live.m3u
-        # 这里加个防止报错的逻辑：如果没有更新就不提交
-        git commit -m "Auto update IPTV sources" || echo "No changes to commit"
+        git config --global user.name "GitHub Action"
+        git config --global user.email "action@github.com"
+        git add all_live.m3u
+        # 如果没有变化，避免报错
+        git commit -m "Auto update IPTV list" || echo "No changes to commit"
         git push
 
-
-        # ... 上面是你原本生成文件的步骤 ...
-
-    - name: Push to Gitee (HTTPS)
-      if: success()
-      env:
-        # 引用你设置好的变量
-        GITEE_TOKEN: ${{ secrets.GITEE_TOKEN }}
-        GITEE_USER: ${{ secrets.GITEE_USER }}
+    # 6. 同步推送到 Gitee
+    - name: Sync to Gitee
       run: |
-        # 1. 设置远程仓库地址，把 Token 嵌在 URL 里，格式是：https://用户名:Token@gitee.com/用户名/仓库名.git
-        # 注意：下面的 main 是分支名，如果你的分支叫 master，请把 main 改成 master
+        # 这里的地址格式为：https://用户名:Token@gitee.com/用户名/仓库名.git
+        git remote add gitee "https://${{ secrets.GITEE_USER }}:${{ secrets.GITEE_TOKEN }}@gitee.com/${{ secrets.GITEE_USER }}/${{ github.event.repository.name }}.git"
         
-        git remote add gitee "https://${GITEE_USER}:${GITEE_TOKEN}@gitee.com/${GITEE_USER}/${{ github.event.repository.name }}.git" || git remote set-url gitee "https://${GITEE_USER}:${GITEE_TOKEN}@gitee.com/${GITEE_USER}/${{ github.event.repository.name }}.git"
-        
-        # 2. 强制推送到 Gitee
-        git push gitee main -f
+        # 强制推送到 Gitee 的 main 分支 (如果你的主分支是 master，请修改为 master)
+        git push -f gitee main
