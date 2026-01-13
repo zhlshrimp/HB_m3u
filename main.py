@@ -1,84 +1,92 @@
 import requests
-import re
 import datetime
+import os
 
-# 你的源文件列表
-URL_FILE = 'url.txt'
-# 输出文件名
-OUTPUT_FILE = 'live.m3u'
+# 配置
+URLS_FILE = 'urls.txt'
+OUTPUT_FILE = 'all_live.m3u'
 
-def fetch_url(url):
+def get_content(url):
     try:
-        response = requests.get(url.strip(), timeout=10)
-        response.encoding = response.apparent_encoding # 自动识别编码，防止乱码
-        return response.text
+        # 设置超时，防止卡死
+        response = requests.get(url, timeout=10)
+        response.encoding = 'utf-8' # 强制utf-8，防止中文乱码
+        if response.status_code == 200:
+            return response.text
+        else:
+            print(f"Failed to fetch {url}: Status {response.status_code}")
+            return None
     except Exception as e:
         print(f"Error fetching {url}: {e}")
-        return ""
+        return None
 
-def is_m3u_content(content):
-    return "#EXTM3U" in content
-
-def convert_txt_to_m3u(content):
-    """将 txt 格式 (频道名,URL) 转换为 m3u 格式"""
-    m3u_lines = []
-    lines = content.split('\n')
-    current_group = "默认分组"
+def parse_m3u(content):
+    """简单的M3U解析，提取EXTINF行和URL"""
+    lines = content.splitlines()
+    playlist = []
+    current_inf = None
     
     for line in lines:
         line = line.strip()
         if not line:
             continue
-            
-        # 处理分组标记，例如 "央视频道,#genre#"
-        if "#genre#" in line:
-            current_group = line.split(',')[0]
-            continue
-            
-        # 处理普通频道 "CCTV1,http://..."
-        if "," in line and "#" not in line:
-            parts = line.split(',')
-            if len(parts) >= 2:
-                name = parts[0]
-                url = parts[1]
-                m3u_lines.append(f'#EXTINF:-1 group-title="{current_group}",{name}')
-                m3u_lines.append(url)
+        if line.startswith("#EXTINF"):
+            current_inf = line
+        elif not line.startswith("#") and current_inf:
+            playlist.append(f"{current_inf}\n{line}")
+            current_inf = None
+    return playlist
+
+def parse_txt(content):
+    """解析 频道名,URL 格式的txt"""
+    lines = content.splitlines()
+    playlist = []
     
-    return "\n".join(m3u_lines)
+    for line in lines:
+        if "," in line and "#genre#" not in line:
+            try:
+                name, url = line.split(",", 1)
+                # 转换成 M3U 格式
+                m3u_entry = f'#EXTINF:-1 group-title="TXT导入",{name.strip()}\n{url.strip()}'
+                playlist.append(m3u_entry)
+            except:
+                continue
+    return playlist
 
 def main():
-    final_content = ["#EXTM3U"]
+    if not os.path.exists(URLS_FILE):
+        print("urls.txt not found!")
+        return
+
+    all_channels = []
     
-    with open(URL_FILE, 'r', encoding='utf-8') as f:
-        urls = f.readlines()
+    # 添加 M3U 头部
+    header = '#EXTM3U x-tvg-url="https://live.fanmingming.com/e.xml"'
+    
+    with open(URLS_FILE, 'r', encoding='utf-8') as f:
+        urls = [line.strip() for line in f if line.strip() and not line.startswith('#')]
 
     for url in urls:
-        url = url.strip()
-        if not url or url.startswith('#'):
-            continue
-            
         print(f"Processing: {url}")
-        content = fetch_url(url)
-        
+        content = get_content(url)
         if not content:
             continue
-
-        if is_m3u_content(content):
-            # 如果是 M3U，去掉头部 #EXTM3U，保留内容
-            lines = content.split('\n')
-            for line in lines:
-                if line.strip() and not line.startswith("#EXTM3U"):
-                    final_content.append(line.strip())
+            
+        if "#EXTM3U" in content:
+            print("Detected Format: M3U")
+            all_channels.extend(parse_m3u(content))
         else:
-            # 如果是 TXT，转换后添加
-            m3u_part = convert_txt_to_m3u(content)
-            final_content.append(m3u_part)
+            print("Detected Format: TXT (Assuming)")
+            all_channels.extend(parse_txt(content))
 
-    # 写入文件
+    # 写入结果
     with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
-        f.write("\n".join(final_content))
+        f.write(header + '\n')
+        # 加上更新时间作为注释
+        f.write(f'# Updated: {datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")}\n')
+        f.write('\n'.join(all_channels))
     
-    print(f"Done! Merged into {OUTPUT_FILE}")
+    print(f"Done! Total channels: {len(all_channels)}")
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()
