@@ -42,3 +42,7 @@ https://raw.githubusercontent.com/imDazui/Tvlist-awesome-m3u-m3u8/master/m3u/%E5
 #iptv hack
 https://live.hacks.tools/tv/iptv4.txt
 https://live.hacks.tools/tv/iptv6.txt
+
+#github_self
+https://raw.githubusercontent.com/zhlshrimp/auto-download-files/refs/heads/main/other_files/m3u1.txt
+https://raw.githubusercontent.com/zhlshrimp/auto-download-files/refs/heads/main/other_files/m3u2.txt
