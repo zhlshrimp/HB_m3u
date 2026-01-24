@@ -38,9 +38,12 @@ jobs:
       run: |
         git config --global user.name "GitHub Action"
         git config --global user.email "action@github.com"
-        git add all_live.m3u
-        # 如果没有变化，避免报错
-        git commit -m "Auto update IPTV list" || echo "No changes to commit"
+        
+        # 这一行改了：添加当前目录下所有改动 (包含那3个新生成的文件)
+        git add .
+        
+        # 提交信息
+        git commit -m "Auto update IPTV source files" || echo "No changes to commit"
         git push
 
     # 6. 同步推送到 Gitee
