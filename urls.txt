@@ -50,4 +50,5 @@ https://raw.githubusercontent.com/zhlshrimp/auto-download-files/refs/heads/main/
 #医工学习日志
 https://iptv.cqshushu.com/index.php?s=YlUrdPwkQpqUULqnAzoVhA&t=hotel&channels=1&format=txt
 http://iptv.cqshushu.com/index.php?s=Vg0LZAxYzU1nUgzDBmxYZg&t=hotel&channels=1&format=txt
+https://iptv.cqshushu.com/?s=IbXE9hW1pt6CHDm-IeCDCQ&t=hotel&channels=1&format=txt
 
