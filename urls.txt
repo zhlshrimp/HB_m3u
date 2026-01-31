@@ -46,3 +46,8 @@ https://live.hacks.tools/tv/iptv6.txt
 #github_self
 https://raw.githubusercontent.com/zhlshrimp/auto-download-files/refs/heads/main/other_files/m3u1.txt
 https://raw.githubusercontent.com/zhlshrimp/auto-download-files/refs/heads/main/other_files/m3u2.txt
+
+#医工学习日志
+https://iptv.cqshushu.com/index.php?s=YlUrdPwkQpqUULqnAzoVhA&t=hotel&channels=1&format=txt
+http://iptv.cqshushu.com/index.php?s=Vg0LZAxYzU1nUgzDBmxYZg&t=hotel&channels=1&format=txt
+
