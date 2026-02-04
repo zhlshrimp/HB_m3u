@@ -1,3 +1,8 @@
+#hotel
+https://raw.githubusercontent.com/zhlshrimp/Hotel_m3u/refs/heads/main/dx.txt
+https://raw.githubusercontent.com/zhlshrimp/Hotel_m3u/refs/heads/main/yd.txt
+https://raw.githubusercontent.com/zhlshrimp/Hotel_m3u/refs/heads/main/lt.txt
+
 https://raw.githubusercontent.com/Guovin/iptv-api/gd/output/result.m3u
 https://raw.githubusercontent.com/Guovin/iptv-api/gd/output/ipv6/result.m3u
 https://raw.githubusercontent.com/Guovin/iptv-api/gd/output/ipv4/result.m3u
