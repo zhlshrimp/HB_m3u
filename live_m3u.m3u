@@ -1,5 +1,5 @@
 #EXTM3U x-tvg-url="https://live.fanmingming.com/e.xml"
-# Updated: 2026-08-12 21:11:22
+# Updated: 2026-08-13 09:38:52
 #EXTINF:-1 tvg-id="CCTV-1" tvg-name="CCTV-1" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-1.png" group-title="🕘️更新时间",2026-08-10 12:11:25
 http://63.141.230.178:82/gslb/zbdq5.m3u8?id=cctv1hd
 #EXTINF:-1 tvg-id="CCTV-1" tvg-name="CCTV-1" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-1.png" group-title="📺央视频道",CCTV-1
@@ -7310,8 +7310,6 @@ http://live.cztv.cc:85/live/ggpd.m3u8
 http://live.cztv.cc:85/live/xwpd.m3u8
 #EXTINF:-1 tvg-id="ChuzhouScienceEducationChannel.cn@SD" tvg-logo="https://i.imgur.com/9JfZJRv.png" group-title="Education;Science",滁州科教 (450p)
 http://183.167.193.45:1935/live/cztvkj/playlist.m3u8
-#EXTINF:-1 tvg-id="GansuTV.cn@SD" tvg-logo="https://i.imgur.com/dANSiug.png" group-title="General",甘肃卫视 (576p)
-http://118.81.195.79:9003/hls/25/index.m3u8
 #EXTINF:-1 tvg-id="BaichengTV.cn@SD" tvg-logo="https://www.tvchinese.net/uploads/tv/baicheng.jpg" group-title="General",白城新闻综合 [Geo-blocked]
 https://stream2.jlntv.cn/baicheng1/sd/live.m3u8
 #EXTINF:-1 tvg-id="DocumentaryHumanitiesChannel.cn@SD" tvg-logo="https://i.imgur.com/CEcNWsE.png" group-title="Undefined",纪实人文 (1080p)
@@ -8160,8 +8158,6 @@ http://117.156.28.119/270000001111/1110000145/index.m3u8
 http://223.110.245.139/PLTV/4/224/3221226388/index.m3u8
 #EXTINF:-1 tvg-id="",甘肃公共 (540p) [Not 24/7]
 https://hls.gstv.com.cn/49048r/3t5xyc.m3u8
-#EXTINF:-1 tvg-id="GansuTV.cn@SD",甘肃卫视 (576p)
-http://118.81.195.79:9003/hls/25/index.m3u8
 #EXTINF:-1 tvg-id="",甘肃移动 (540p) [Not 24/7]
 https://hls.gstv.com.cn/49048r/y72q36.m3u8
 #EXTINF:-1 tvg-id="",生活 (576p)
@@ -8400,6 +8396,12 @@ http://183.207.248.71/gitv/live1/G_HEILONGJIANG/G_HEILONGJIANG
 http://183.207.248.71/cntv/live1/HD-2500k-1080P-heilongjiangstv/HD-2500k-1080P-heilongjiangstv
 #EXTINF:-1 tvg-id="HeilongjiangTV.cn@SD",黑龙江卫视 (2160p)
 http://118.81.195.79:9003/hls/31/index.m3u8
+#EXTINF:-1 tvg-id="CGTNGlobalBiz.cn@SD",CGTN Global Biz (1080p)
+https://fastlive.cctvplus.com/out/v1/2b3d8a0c805d437f9dc85b764c2ac599/index.m3u8
+#EXTINF:-1 tvg-id="DiscoveringChina.cn@SD",Discovering China (1080p)
+https://fastlive.cctvplus.com/out/v1/8442c3bfd4c64a3984389328f6087879/index.m3u8
+#EXTINF:-1 tvg-id="ChinaTravel.cn@SD",China Travel (1080p)
+https://fastlive.cctvplus.com/out/v1/ca6f9297b7314a63959435028af287fc/index.m3u8
 #EXTINF:-1 tvg-name="北京卫视" tvg-logo="https://gitee.com/suxuang/logo/raw/master/mylogo/北京卫视4K.png" http-user-agent="AptvPlayer-UA" group-title="4K频道",北京卫视4K
 http://8.138.7.223/tv/btime.php?id=bjws4k
 #EXTINF:-1 tvg-name="东方卫视" tvg-logo="https://gitee.com/suxuang/logo/raw/master/mylogo/东方卫视4K.png" http-user-agent="aliplayer" group-title="4K频道",东方卫视4K
@@ -11135,7 +11137,7 @@ https://0472.org/hls/cgtnx.m3u8
 #EXTINF:-1 tvg-name="CGTN阿语" tvg-logo="https://live.fanmingming.cn/tv/CGTN阿语.png" group-title="央视频道",CGTN阿语
 https://0472.org/hls/cgtna.m3u8
 #EXTINF:-1 tvg-name="安徽卫视" tvg-logo="https://gh-proxy.com/https://raw.githubusercontent.com/fanmingming/live/main/tv/安徽卫视.png" group-title="安徽" http-referrer="https://www.ahtv.cn/",安徽卫视
-https://live1.ahtv.cn/ahws/playlist.m3u8?_upt=316f0cf61786576223
+https://live1.ahtv.cn/ahws/playlist.m3u8?_upt=722555741786620626
 #EXTINF:-1 tvg-name="北京卫视" tvg-logo="https://gh-proxy.com/https://raw.githubusercontent.com/fanmingming/live/main/tv/北京卫视.png" group-title="北京",北京卫视
 {BEIJINGTV}
 #EXTINF:-1 tvg-name="东南卫视" tvg-logo="https://gh-proxy.com/https://raw.githubusercontent.com/fanmingming/live/main/tv/东南卫视.png" group-title="福建",东南卫视
@@ -11147,19 +11149,19 @@ https://live1.ahtv.cn/ahws/playlist.m3u8?_upt=316f0cf61786576223
 #EXTINF:-1 tvg-name="广西卫视" tvg-logo="https://gh-proxy.com/https://raw.githubusercontent.com/fanmingming/live/main/tv/广西卫视.png" group-title="广西",广西卫视
 https://hlscdn.liangtv.cn/live/0c4ef3a44b934cacb8b47121dfada66c/d7e04258157b480dae53883cc6f8123b.m3u8
 #EXTINF:-1 tvg-name="贵州卫视" tvg-logo="https://gh-proxy.com/https://raw.githubusercontent.com/fanmingming/live/main/tv/贵州卫视.png" group-title="贵州",贵州卫视
-https://9bwaz8y2.gzstv.com/live/CH01_lo.m3u8?txSecret=0a526d467a12c3ea34be5184d8c662c3&txTime=6A7CDEDF
+https://9bwaz8y2.gzstv.com/live/CH01_lo.m3u8?txSecret=33898a9fab6efbf0010f76676d6b4f71&txTime=6A7D8EB5
 #EXTINF:-1 tvg-name="海南卫视" tvg-logo="https://gh-proxy.com/https://raw.githubusercontent.com/fanmingming/live/main/tv/海南卫视.png" group-title="海南",海南卫视
 https://livelyws1.chinamcache.com/lyws/newlive_zb03.m3u8?auth_key=1767148001-0-0-0650c6542c331540df214a79a09a2356
 #EXTINF:-1 tvg-name="河北卫视" tvg-logo="https://gh-proxy.com/https://raw.githubusercontent.com/fanmingming/live/main/tv/河北卫视.png" group-title="河北",河北卫视
-https://tv.pull.hebtv.com/jishi/weishipindao.m3u8?t=1786576238&k=1cec1964125bf766f19b8cbf4b7c127b
+https://tv.pull.hebtv.com/jishi/weishipindao.m3u8?t=1786620630&k=e2daa70249739e3b427e5e6d33dcf9dd
 #EXTINF:-1 tvg-name="黑龙江卫视" tvg-logo="https://gh-proxy.com/https://raw.githubusercontent.com/fanmingming/live/main/tv/黑龙江卫视.png" group-title="黑龙江",黑龙江卫视
 {HEILONGJIANGTV}
 #EXTINF:-1 tvg-name="河南卫视" tvg-logo="https://gh-proxy.com/https://raw.githubusercontent.com/fanmingming/live/main/tv/河南卫视.png" group-title="河南",河南卫视
-http://tvcdn.stream3.hndt.com/tv/65c4a6d5017e1000b2b6ea2500000000_transios/playlist.m3u8?wsSecret=30ed8925f2e4db75d3831a80c642abf9&wsTime=1786583415&wsSession=d0b9b2b6a28c06ab102d2fef-178656901596899&wsIPSercert=965199407363e75c3ccb566d6f002965&wsBindIP=2&wsserid=1168059453711143180
+http://tvcdn.stream3.hndt.com/tv/65c4a6d5017e1000b2b6ea2500000000_transios/playlist.m3u8?wsSecret=f0ffe9dbe843aa388f623501fb2d4137&wsTime=1786627818&wsSession=1edad193f5facb5807612411-178661341851724&wsIPSercert=965199407363e75c3ccb566d6f002965&wsBindIP=2&wsserid=1168299907386754607
 #EXTINF:-1 tvg-name="吉林卫视" tvg-logo="https://gh-proxy.com/https://raw.githubusercontent.com/fanmingming/live/main/tv/吉林卫视.png" group-title="吉林",吉林卫视
-https://hls.avap.jilintv.cn/zqvk7vpj/channel/0533b55e42354f4f802bdec78e26b571/index.m3u8?txSecret=f7350af31b0aae99d244a22a014311df&txTime=6A7D1993
+https://hls.avap.jilintv.cn/zqvk7vpj/channel/0533b55e42354f4f802bdec78e26b571/index.m3u8?txSecret=d34b658fe7f8cf0cbc18c629f6d8e441&txTime=6A7DC73B
 #EXTINF:-1 tvg-name="内蒙古卫视" tvg-logo="https://gh-proxy.com/https://raw.githubusercontent.com/fanmingming/live/main/tv/内蒙古卫视.png" group-title="内蒙古",内蒙古卫视
-https://livestream-bt.nmtv.cn/nmtv/3621481general.m3u8?txSecret=a0b8cc66a1124cf66791a507195b9093&txTime=6D58FFD0&token=fff3606cbc3245f294ab4851c8c42ffa
+{NEIMENGGUTV}
 #EXTINF:-1 tvg-name="青海卫视" tvg-logo="https://gh-proxy.com/https://raw.githubusercontent.com/fanmingming/live/main/tv/青海卫视.png" group-title="青海",青海卫视
 {QINGHAITV}
 #EXTINF:-1 tvg-name="山东卫视" tvg-logo="https://gh-proxy.com/https://raw.githubusercontent.com/fanmingming/live/main/tv/山东卫视.png" group-title="山东" http-referrer="https://v.iqilu.com/",山东卫视
@@ -11169,13 +11171,13 @@ https://livehhhttps.sxrtv.com/lsdream/q8RVWgs/1000/22sqbR0.m3u8
 #EXTINF:-1 tvg-name="陕西卫视" tvg-logo="https://gh-proxy.com/https://raw.githubusercontent.com/fanmingming/live/main/tv/陕西卫视.png" group-title="陕西",陕西卫视
 http://stream.snrtv.com/sxbc-star-gjnqAJ.m3u8
 #EXTINF:-1 tvg-name="西藏卫视" tvg-logo="https://gh-proxy.com/https://raw.githubusercontent.com/fanmingming/live/main/tv/西藏卫视.png" group-title="西藏",西藏卫视
-https://tv.vtibet.cn/live/h701F9MpxzPDyE.m3u8?secret=bf82736f84fc55ed5bf4bd05af0cb473&time=6a7ce12b
+https://tv.vtibet.cn/live/h701F9MpxzPDyE.m3u8?secret=82eda0ab8d0f48023245dd0c9ca3053b&time=6a7d8ea9
 #EXTINF:-1 tvg-name="新疆卫视" tvg-logo="https://gh-proxy.com/https://raw.githubusercontent.com/fanmingming/live/main/tv/新疆卫视.png" group-title="卫视",新疆卫视
 {XINJIANGTV}
 #EXTINF:-1 tvg-name="云南卫视" tvg-logo="https://gh-proxy.com/https://raw.githubusercontent.com/fanmingming/live/main/tv/云南卫视.png" group-title="云南",云南卫视
 {YUNNANTV}
 #EXTINF:-1 tvg-name="浙江卫视" tvg-logo="https://gh-proxy.com/https://raw.githubusercontent.com/fanmingming/live/main/tv/浙江卫视.png" group-title="浙江",浙江卫视
-https://zwebl02.cztv.com/live/channel011080P.m3u8?auth_key=1786569042-j9cf5yir82mfpknevv00yfjnuq54qijv-0-de4ca0b08729a0e971328c4f4ae3d8c9
+{ZHEJIANGTV}
 #EXTINF:-1 tvg-name="CCTV1" tvg-logo="https://live.fanmingming.cn/tv/CCTV1.png" group-title="央视频道",CCTV-1综合
 http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226895/1.m3u8?
 #EXTINF:-1 tvg-name="CCTV2" tvg-logo="https://live.fanmingming.cn/tv/CCTV2.png" group-title="央视频道",CCTV-2财经
@@ -13942,8 +13944,6 @@ http://live.cztv.cc:85/live/ggpd.m3u8
 http://live.cztv.cc:85/live/xwpd.m3u8
 #EXTINF:-1 tvg-id="ChuzhouScienceEducationChannel.cn@SD" tvg-logo="https://i.imgur.com/9JfZJRv.png" group-title="Education;Science",滁州科教 (450p)
 http://183.167.193.45:1935/live/cztvkj/playlist.m3u8
-#EXTINF:-1 tvg-id="GansuTV.cn@SD" tvg-logo="https://i.imgur.com/dANSiug.png" group-title="General",甘肃卫视 (576p)
-http://118.81.195.79:9003/hls/25/index.m3u8
 #EXTINF:-1 tvg-id="BaichengTV.cn@SD" tvg-logo="https://www.tvchinese.net/uploads/tv/baicheng.jpg" group-title="General",白城新闻综合 [Geo-blocked]
 https://stream2.jlntv.cn/baicheng1/sd/live.m3u8
 #EXTINF:-1 tvg-id="DocumentaryHumanitiesChannel.cn@SD" tvg-logo="https://i.imgur.com/CEcNWsE.png" group-title="Undefined",纪实人文 (1080p)
@@ -14006,8 +14006,8 @@ http://223.110.245.139/ott.js.chinamobile.com/PLTV/3/224/3221226922/index.m3u8
 http://223.110.245.167/ott.js.chinamobile.com/PLTV/3/224/3221226923/index.m3u8
 #EXTINF:-1 tvg-id="BSTV.hk@SD" tvg-logo="https://i.imgur.com/GVYSSgm.png" group-title="Shop",耀才財經台 (576p)
 http://202.69.67.66:443/webcast/bshdlive-pc/playlist.m3u8
-#EXTINF:-1 tvg-id="AXNAsia.sg@Taiwan" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/AXN_logo_%282015%29.svg/960px-AXN_logo_%282015%29.svg.png" group-title="Movies;Series",AXN Asia Taiwan (720p)
-https://play.wenxiang.cn/live/1a88465f153e1dd2108fd791bf4f25f7.flv
+#EXTINF:-1 tvg-id="AXNAsia.sg@Taiwan" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/AXN_logo_%282015%29.svg/960px-AXN_logo_%282015%29.svg.png" group-title="Movies;Series",AXN Asia Taiwan (1080p)
+http://125.227.210.55:4050/VideoInput/play.ts
 #EXTINF:-1 tvg-id="BeautifulLifeTV.tw@SD" tvg-logo="https://i.imgur.com/hkwcBM9.png" group-title="Religious",Beautiful Life TV
 https://5ddce30eb4b55.streamlock.net/bltvhd/bltv1/playlist.m3u8
 #EXTINF:-1 tvg-id="CGNTVChinese.tw@SD" tvg-logo="https://i.imgur.com/bPoPAbR.png" group-title="Religious",CGNTV Chinese (1080p)
